@@ -13,6 +13,7 @@
 		71A8A6BB1CB7CF770011BDC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A8A6BA1CB7CF770011BDC2 /* Assets.xcassets */; };
 		71A8A6BE1CB7CF770011BDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71A8A6BC1CB7CF770011BDC2 /* LaunchScreen.storyboard */; };
 		71A8A6CC1CB7D4340011BDC2 /* SLLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A8A6CB1CB7D4340011BDC2 /* SLLLoginViewController.m */; };
+		71A8A6CF1CB7F0170011BDC2 /* SLLContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A8A6CE1CB7F0170011BDC2 /* SLLContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		71A8A6BF1CB7CF770011BDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		71A8A6CA1CB7D4340011BDC2 /* SLLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLLoginViewController.h; sourceTree = "<group>"; };
 		71A8A6CB1CB7D4340011BDC2 /* SLLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLLoginViewController.m; sourceTree = "<group>"; };
+		71A8A6CD1CB7F0170011BDC2 /* SLLContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLContactViewController.h; sourceTree = "<group>"; };
+		71A8A6CE1CB7F0170011BDC2 /* SLLContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				71A8A6CA1CB7D4340011BDC2 /* SLLLoginViewController.h */,
 				71A8A6CB1CB7D4340011BDC2 /* SLLLoginViewController.m */,
+				71A8A6CD1CB7F0170011BDC2 /* SLLContactViewController.h */,
+				71A8A6CE1CB7F0170011BDC2 /* SLLContactViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				71A8A6CC1CB7D4340011BDC2 /* SLLLoginViewController.m in Sources */,
 				71A8A6B31CB7CF770011BDC2 /* AppDelegate.m in Sources */,
 				71A8A6B01CB7CF770011BDC2 /* main.m in Sources */,
+				71A8A6CF1CB7F0170011BDC2 /* SLLContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
