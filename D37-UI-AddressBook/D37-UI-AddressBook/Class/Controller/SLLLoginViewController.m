@@ -7,6 +7,7 @@
 //
 
 #import "SLLLoginViewController.h"
+#import "SLLContactViewController.h"
 
 @interface SLLLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTxt;
@@ -31,6 +32,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userTextChange) name:UITextFieldTextDidChangeNotification object:self.userTxt];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userTextChange) name:UITextFieldTextDidChangeNotification object:self.passTxt];
+}
+
+#pragma mark- 移除通知
+-(void)dealloc
+{
+    NSLog(@"移除");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -63,7 +71,31 @@
     }
 }
 
+#pragma mark- 点击登录
 - (IBAction)loginBtn:(UIButton *)sender {
+    
+    
+    //判断用户名密码是否正确
+    if ([self.userTxt.text isEqual:@"sl"]&&[self.passTxt.text isEqual:@"123"]) {
+        NSLog(@"登录成功");
+        SLLContactViewController *tableCon=[[SLLContactViewController alloc]init];
+        [self.navigationController pushViewController:tableCon animated:YES];
+    }else{
+       NSLog(@"登录失败");
+    }
+    
+}
+
+#pragma mark- 导航之前准备
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+   //获取目标控制器
+    UIViewController *des=segue.destinationViewController;
+    
+    //给目标控制器的属性赋值
+    des.navigationItem.title=[NSString stringWithFormat:@"%@的联系人",self.userTxt.text];
+    NSLog(@"%@",sender);
+    
 }
 
 
