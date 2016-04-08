@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--登陆-->
+        <!--欢迎使用通讯录-->
         <scene sceneID="VYz-ec-m5b">
             <objects>
                 <viewController id="fhC-Wp-P5u" customClass="SLLLoginViewController" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="loginBtn:" destination="fhC-Wp-P5u" eventType="touchUpInside" id="kPx-PQ-LUN"/>
-                                    <segue destination="EPQ-EM-3zj" kind="show" id="7ly-Rh-ARV"/>
+                                    <segue destination="piK-Mm-kxe" kind="show" id="pZa-Im-t3v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,7 +97,7 @@
                             <constraint firstItem="dn9-PQ-zM9" firstAttribute="top" secondItem="CcR-IK-oSD" secondAttribute="bottom" constant="10" id="zIt-vH-15m"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="登陆" id="cfh-bG-7aP"/>
+                    <navigationItem key="navigationItem" title="欢迎使用通讯录" id="cfh-bG-7aP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginBtn" destination="e8t-jc-kgb" id="6QK-cV-X8B"/>
@@ -111,24 +111,34 @@
             </objects>
             <point key="canvasLocation" x="868.5" y="441.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="CmV-OE-7sP">
+        <!--xxx联系人-->
+        <scene sceneID="ROR-q0-UNU">
             <objects>
-                <viewController id="EPQ-EM-3zj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8u8-jJ-pCY"/>
-                        <viewControllerLayoutGuide type="bottom" id="3t8-qn-JDL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xih-lX-4Y2">
+                <tableViewController id="piK-Mm-kxe" customClass="SLLContactViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uyx-vx-mLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AmO-0h-Oiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dnb-2Z-KVy">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dnb-2Z-KVy" id="cEg-cw-sg6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="piK-Mm-kxe" id="QQz-S1-gU5"/>
+                            <outlet property="delegate" destination="piK-Mm-kxe" id="zAQ-4n-09M"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="xxx联系人" id="Dh1-95-f1Y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCQ-4J-o0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329.5" y="441.5"/>
+            <point key="canvasLocation" x="1382" y="414"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="clp-Uz-Dgt">
